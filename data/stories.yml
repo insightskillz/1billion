@@ -1,0 +1,30 @@
+version: '2.0'
+
+stories:
+ - story: greet and subscribe
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: subscribe
+   - action: newsletter_form
+   - active_loop: newsletter_form
+
+ - story: inform the agents
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: inform
+   - action: action_inform
+
+
+ - story: get agents credentials
+   steps:
+   - intent: agent_login
+   - action: utter_agent_login
+
+ - story: get customer_pin credentials
+   steps:
+   - intent: customer_pin
+   - action: utter_customer_pin
+
+
